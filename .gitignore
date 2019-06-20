@@ -70,6 +70,7 @@ fabric.properties
 */target
 *.class
 
+kotlin/.idea
 a.out
 /cpp/Workspace/**
 !/cpp/Workspace/helper.sh
