@@ -4,7 +4,15 @@ import java.util.*
 var kin = InputReader(getInput())
 val kout = PrintWriter(System.out)
 
+fun solveCase() {
+}
+
 fun solve() {
+    val t = kin.int()
+    for (i in 1..t) {
+        kout.print("Case #$i: ")
+        solveCase()
+    }
 }
 
 fun main() {
@@ -22,8 +30,14 @@ class InputReader(stream: InputStream) {
         return tokenizer!!.nextToken()
     }
 
+    fun <R> list(n: Int, parse: (String) -> R): List<R> {
+        return (1..n).map { parse.invoke(str()) }
+    }
+
     fun int() = str().toInt()
+    fun listInt(n: Int) = list(n) { it.toInt() }
     fun long() = str().toLong()
+    fun listLong(n: Int) = list(n) { it.toLong() }
 }
 
 fun getInput(): InputStream {
