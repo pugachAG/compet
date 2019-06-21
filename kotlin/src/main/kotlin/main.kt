@@ -1,18 +1,11 @@
 import java.io.*
 import java.util.*
+import kotlin.math.*
 
 var kin = InputReader(getInput())
 val kout = PrintWriter(System.out)
 
-fun solveCase() {
-}
-
 fun solve() {
-    val t = kin.int()
-    for (i in 1..t) {
-        kout.print("Case #$i: ")
-        solveCase()
-    }
 }
 
 fun main() {
