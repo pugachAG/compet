@@ -19,6 +19,10 @@ public:
         return (a + b) % MOD;
     }
 
+    inline long long sub(long long a, long long b) {
+        return (a - b + MOD) % MOD;
+    }
+
     inline void inc(long long &a, long long b) {
         a = add(a, b);
     }
