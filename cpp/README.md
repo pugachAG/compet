@@ -1,3 +1,18 @@
+#### DP
+```
+#include "../Algo/DP/dp.h"
+
+struct DP: DP2<DP, long long> {
+	long long impl(int i, int j) {
+		return 0;
+	}
+};
+
+auto dp = DP::create(n, m);
+auto ans = dp->calc(...);
+```
+
+
 #### Codeforces interactive problems
 ```
 mkfifo fifo
