@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" nameIsGenerated="true">
-    <module name="kotlin" />
+  <configuration default="false" name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
+    <module name="compet-kotlin" />
     <option name="VM_PARAMETERS" value="-Dcompet.input=input.txt" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />

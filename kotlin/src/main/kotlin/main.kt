@@ -1,70 +1,20 @@
 import java.io.*
 import java.util.*
-import java.util.ArrayList
-import kotlin.math.abs
+import kotlin.collections.HashSet
 
 var kin = InputReader(getInput())
 val kout = PrintWriter(System.out)
 
-fun lis(mn: Int, mx: Int, a: List<Int>): Int {
-    val dp = ArrayList<Int>()
-    for (v in a) {
-        if (v !in mn..mx) {
-            continue
-        }
-        var l = -1
-        var r = dp.lastIndex
-        while (l < r) {
-            val mid = (l+r+1)/2
-            if (v >= dp[mid]) {
-                l = mid
-            } else {
-                r = mid-1
-            }
-        }
-        val j = l+1
-        if (j == dp.size) {
-            dp.add(v)
-        } else if (dp[j] > v) {
-            dp[j] = v
-        }
-    }
-    return dp.size
-}
-
-
 fun solveCase() {
-    val n = kin.int()
-    val k = kin.int()
-    val a = kin.listInt(n).withIndex().map { it.value - it.index }
-    val b = kin.listInt(k).map { it-1 }.toSet()
-    var mn = Int.MIN_VALUE
-    var mx = Int.MAX_VALUE
-    val cur = ArrayList<Int>()
-    var ok = true
-    var ans = 0
-    for (i in 0..n) {
-        if (i == n || b.contains(i)) {
-            mx = if (i == n) Int.MAX_VALUE else a[i]
-            if (mx < mn) {
-                ok = false
-            }
-            val len = lis(mn, mx, cur)
-            ans += cur.size - len
-            cur.clear()
-            mn = mx
-        } else {
-            cur.add(a[i])
-        }
+    val (n, k) = kin.listInt(2)
+    data class State(val can: Boolean, val z: Int)
+    for (i in n-1 downTo 0) {
+
     }
-    if (!ok) {
-        ans = -1
-    }
-    kout.println(ans)
 }
 
 fun solve() {
-    repeat(1) {
+    repeat(kin.int()) {
         solveCase()
     }
 }

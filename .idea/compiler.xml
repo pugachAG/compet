@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java" />
         <module name="kotlin" />
+        <module name="compet-java" />
+        <module name="java" />
+        <module name="compet-kotlin" />
       </profile>
     </annotationProcessing>
   </component>
